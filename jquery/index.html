@@ -7,7 +7,9 @@
     </ul>
 
     <script>
-      var numArray = [64,321,21,78,995,43,863,3,5,82,904];
+      setInterval(function() {
+        $('body').trigger('randomNumberEvent', Math.floor( Math.random() * 1000 ));
+      }, 3500);
 
       /*
        * Please write your solution below.
