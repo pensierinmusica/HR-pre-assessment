@@ -9,11 +9,20 @@
     <script>
       setInterval(function() {
         $('body').trigger('randomNumberEvent', Math.floor( Math.random() * 1000 ));
-      }, 3500);
+      }, 350);
+  
+
 
       /*
        * Please write your solution below.
        */
+       $('body').on('randomNumberEvent',function(event,num) {
+        $newLi = $('<li>'+num+'</li>');
+        $('.numberList').append($newLi);
+        $newLi.click(function(){
+          alert(num);
+        });
+       });
     </script>
   </body>
 </html>
